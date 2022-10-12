@@ -11,7 +11,6 @@ const Map = () => {
   const { vehicle } = location.state
   const mapContainerRef = useRef(null)
   const getVehicleLocation = async () => {
-    console.log('Inside getVehicleLocation')
     if (vehicle) {
       try {
         mapContainerRef.current.innerHTML = ''
@@ -30,7 +29,6 @@ const Map = () => {
             if (snapshot.exists()) {
               const vehicleInfo = snapshot.val()
               if (vehicleInfo.location) {
-                console.log('vehicleInfo', vehicleInfo.location.latitude, vehicleInfo.location.longitude)
                 const lat = vehicleInfo.location.latitude > 90 ? 90 : vehicleInfo.location.latitude
                 const lng = vehicleInfo.location.longitude > 180 ? 180 : vehicleInfo.location.longitude
                 map.setCenter([lng, lat])
