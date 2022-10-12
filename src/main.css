@@ -1,0 +1,19 @@
+body{
+    min-height: 100vh;
+    margin: 0%;
+    box-sizing: border-box;
+    padding: 0%;
+}
+a{ 
+    text-decoration: none;
+    color: inherit;
+}
+.mapboxgl-marker{
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right {
+    display: none;
+}

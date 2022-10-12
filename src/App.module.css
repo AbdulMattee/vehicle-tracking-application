@@ -1,0 +1,16 @@
+.vehicle_cards_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 50px auto;
+    gap: 20px;
+    justify-content: center;
+}
+.vehicle_cards_container div{
+    font-family: "monospace", sans-serif;
+}
+.pagination_div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}

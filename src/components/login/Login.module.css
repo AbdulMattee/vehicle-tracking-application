@@ -1,0 +1,69 @@
+.login_section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.blue_div{
+    width:50%;
+    background-color: hsl(200deg 100% 41%);
+    height: 100%;
+}
+
+.login_div{
+    width: 80%;
+    position: absolute;
+    margin-left: 10%;
+    height: 80%;
+    display: flex;
+    box-shadow:1px 2px 7px 0px #525151 ;
+}
+.info_div{
+    color: white;
+    width: 50%;
+    gap: 0px 10px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+.info_logo{
+    width: 70px;
+    border: 5px solid white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    justify-content: center;
+    border-radius: 50%;
+}
+.form_div{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width:250px;
+}
+.login_form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.login_form small{
+    color:red;
+    font-size: 12px;
+}
+.login_form h2{
+    font-family: "Montserrat", sans-serif;
+    color: #707070;
+    text-align: center;
+}
+.submit-btn {
+    width: 40px;
+    height: 40px;
+}
