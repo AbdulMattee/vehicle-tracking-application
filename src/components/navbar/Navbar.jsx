@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useContext } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -8,12 +8,20 @@ import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
+import userContext from '../context/Context'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const pages = ['Login', 'Vehicles']
 
 const Navbar = () => {
   const navigate = useNavigate()
+  const user = useContext(userContext)
+  const logout = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('name')
+    user.setUser(null)
+    navigate('/login')
+  }
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -45,10 +53,7 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <Tooltip title="Logout" onClick={() => {
-            localStorage.removeItem('token')
-            navigate('/login')
-          }}>
+          <Tooltip title="Logout" onClick={logout}>
               <IconButton sx={{ p: 0 }}>
                 <Avatar />
               </IconButton>
